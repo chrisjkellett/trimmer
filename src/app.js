@@ -25,9 +25,18 @@ class Trimmer {
     return null;
   }
 
+  strip(word){
+    if(this.shouldCheck(word)){
+      let pre = this.leading(word);
+      let post = this.trailing(word);
+      return word.substring(pre.length, word.length - post.length);
+    }
+    return word;
+  }
+
   // private
-  isNonAlphanumericChar(char){
-    return /\W/.test(char);
+  isNonAlphanumericChar(str){
+    return /\W/.test(str);
   }
 
   shouldCheck(word){
