@@ -30,12 +30,12 @@ describe('trim.leading()', () => {
 
 describe('trim.trailing()', () => {
   it('returns null when no trailing punctuation', () => {
-    const result = trim.leading('hello');
+    const result = trim.trailing('hello');
     expect(result).toBeNull();
   });
 
-  // it('else returns leading punctuation', () => {
-  //   const result = trim.leading('hello' + punctuation);
-  //   expect(result).toBe(punctuation);
-  // })
+  it('else returns leading punctuation', () => {
+    const result = trim.trailing('hello' + punctuation);
+    expect(result).toBe(punctuation);
+  })
 })

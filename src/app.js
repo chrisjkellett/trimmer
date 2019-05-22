@@ -13,16 +13,16 @@ class Trimmer {
   }
 
   trailing(word){
-    console.log(word)
-    // if(this.shouldCheck(word)){
-    //   let trailingPunctuation = [];
-    //   for(let i = word.length - 1; i == 0; i--){
-    //     if(this.isNonAlphanumericChar(word[i]))
-    //       trailingPunctuation.unshift(word[i])
-    //     else
-    //       return trailingPunctuation.join("");
-    //   }
-    // }
+    if(this.shouldCheck(word)){
+      let trailingPunctuation = [];
+      for(let i = word.length - 1; i > 0; i--){
+        if(this.isNonAlphanumericChar(word[i]))
+          trailingPunctuation.unshift(word[i])
+        else
+          return trailingPunctuation.join("")
+      }
+    }
+    return null;
   }
 
   // private
