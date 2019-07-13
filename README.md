@@ -1,4 +1,4 @@
-#trimmer
+# trimmer
 
 has 3 methods for trimming punctuation from strings
 
